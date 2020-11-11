@@ -1,1 +1,126 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* =Fonts
+-------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@500;600;800&family=Montserrat:wght@500;600;800&display=swap');
+
+/* =Reset
+-------------------------------------------------------------- */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =Estrutura principal
+-------------------------------------------------------------- */
+
+#app {
+    height: 100%;
+}
+
+/* =header
+-------------------------------------------------------------- */
+
+header {
+    background-color: #FAF9D1;
+}
+
+.header__wrp {
+    width: 100%;
+    padding: 30px;
+}
+
+.header__topo {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 39px;
+    height: 39px;
+    background: url(./assets/images/bar_chart.svg) no-repeat 0 0;
+}
+
+.header__btn-menu {
+    background: transparent;
+    width: 39px;
+    height: 39px;
+    border: 0;
+    background: url(./assets/images/hamburger.svg) no-repeat 0 0;
+    cursor: pointer;
+}
+
+.header__title {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.header__title .header__label {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+/* =media queries
+-------------------------------------------------------------- */
+@media screen and (min-width: 1000px) {
+    #app {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    header {
+        height: 100%;
+        width: 28.8%;
+        position: absolute;
+        background-image: url('./assets/images/bg-shapes.png');
+        background-repeat: no-repeat;
+        background-position: -280px 110px;
+        background-size: cover;
+    }
+
+    main {
+        margin-left: 28.8%;
+        width: 100%;
+    }
+
+    .main_wrp {
+        padding: 54px;
+    }
+
+    .header__wrp {
+        padding: 54px;
+    }
+
+    .header__title {
+        margin: 100px 0;
+    }
+}
