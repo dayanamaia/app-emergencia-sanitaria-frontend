@@ -1,0 +1,61 @@
+header {
+    background-color: #FAF9D1;
+}
+
+.header__wrp {
+    width: 100%;
+    padding: 30px;
+}
+
+.header__topo {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 39px;
+    height: 39px;
+    background: url(../../../assets/images/bar_chart.svg) no-repeat 0 0;
+}
+
+.header__btn-menu {
+    background: transparent;
+    width: 39px;
+    height: 39px;
+    border: 0;
+    background: url(../../../assets/images/hamburger.svg) no-repeat 0 0;
+    cursor: pointer;
+}
+
+.header__title {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.header__title .header__label {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+@media screen and (min-width: 1000px) {
+
+    header {
+        height: 100%;
+        width: 28.8%;
+        position: absolute;
+        background-image: url('../../../assets/images/bg-shapes.png');
+        background-repeat: no-repeat;
+        background-position: -280px 110px;
+        background-size: cover;
+    }
+
+    .header__wrp {
+        padding: 54px;
+    }
+
+    .header__title {
+        margin: 100px 0;
+    }
+}
