@@ -88,9 +88,20 @@ h6 {
     color: #444444;
 }
 
+.flag-status.flag-status--small {
+    width: 60px;
+    height: 30px;
+}
+
 .flag-status.flag-status--warning {
     border-color: #9A36BB;
     color: #9A36BB;
+}
+
+.flag-status.flag-status--warning.flag-status--full {
+    border: 0;
+    color: #9A36BB;
+    background-color: #F2D6FC;
 }
 
 .flag-status .flag-status__icon {

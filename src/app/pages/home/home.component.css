@@ -60,6 +60,25 @@
     font-weight: 700;
 }
 
+/* =chart
+-------------------------------------------------------------- */
+
+.chart {
+    align-items: center;
+    margin-top: 70px;
+}
+
+.chart .chart__title {
+    display: flex;
+    margin-right: 14px;
+    align-items: center;
+}
+
+.chart .chart__content {
+    margin-top: 20px;
+}
+
+
 /* =media queries
 -------------------------------------------------------------- */
 @media screen and (min-width: 1025px) {
