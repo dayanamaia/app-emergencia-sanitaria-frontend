@@ -46,6 +46,37 @@ h6 {
     padding: 30px;
 }
 
+.d-flex {
+    display: flex;
+}
+
+/* =flags
+-------------------------------------------------------------- */
+
+.flag-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 36px;
+    text-align: center;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    color: #444444;
+}
+
+.flag-status.flag-status--warning {
+    border-color: #9A36BB;
+    color: #9A36BB;
+}
+
+.flag-status .flag-status__icon {
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    background: url('./assets/images/long_up.svg') no-repeat 0 0;
+}
+
 
 /* =media queries
 -------------------------------------------------------------- */
@@ -66,5 +97,10 @@ h6 {
     .main__wrp {
         padding: 54px;
     }
+
+    .page__dflex-lg {
+        display: flex;
+    }
 }
+
 

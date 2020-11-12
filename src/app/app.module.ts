@@ -8,13 +8,15 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
+import { ProgressBarComponent } from './shared/components/progress-bar/progress-bar.component';
 registerLocaleData(ptBr)
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

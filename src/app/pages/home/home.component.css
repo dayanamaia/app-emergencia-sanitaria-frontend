@@ -34,6 +34,14 @@
     width: 100%;
 }
 
+.page__content {
+    margin-top: 40px;
+}
+
+.page__title-about {
+    justify-content: space-between;
+}
+
 /* =media queries
 -------------------------------------------------------------- */
 @media screen and (min-width: 1025px) {
