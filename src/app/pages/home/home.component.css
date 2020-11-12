@@ -1,0 +1,53 @@
+/* =page header
+-------------------------------------------------------------- */
+
+.page__header {
+    border-bottom: 2px solid #DBE9F5;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.city__select {
+    margin-top: 10px;
+}
+
+.city__select label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.city__select input[type="text"] {
+    border: 2px solid #DBE9F5;
+    padding: 14px 14px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* =media queries
+-------------------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+    .page__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    .label__date {
+        margin: 0;
+    }
+
+    .city__select {
+        margin-top: inherit;
+    }
+
+    .city__select label {
+        display: inline-block;
+        margin-right: 14px;
+        margin-bottom: inherit;
+    }
+
+    .city__select input[type="text"] {
+        width: inherit;
+    }
+}

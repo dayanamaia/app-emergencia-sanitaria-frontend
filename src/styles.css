@@ -42,10 +42,14 @@ h6 {
     height: 100%;
 }
 
+.main__wrp {
+    padding: 30px;
+}
+
 
 /* =media queries
 -------------------------------------------------------------- */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
     #app {
         display: flex;
         justify-content: space-between;
