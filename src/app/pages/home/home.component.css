@@ -9,6 +9,17 @@
 
 .city__select {
     margin-top: 10px;
+    position: relative;
+}
+
+.icon__select {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../assets/images/search.svg');
+    position: absolute;
+    right: 16px;
+    bottom: 13px;
 }
 
 .city__select label {
@@ -18,7 +29,7 @@
 
 .city__select input[type="text"] {
     border: 2px solid #DBE9F5;
-    padding: 14px 14px;
+    padding: 14px 40px 14px 14px;
     border-radius: 8px;
     width: 100%;
 }
