@@ -117,8 +117,13 @@
               "devServerTarget": "app-emergencia-sanitaria-frontend:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "app-emergencia-sanitaria-frontend"
 }
