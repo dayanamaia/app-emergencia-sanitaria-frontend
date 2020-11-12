@@ -1,1 +1,8 @@
-<p>progress-bar works!</p>
+<div class="progress" [class]="size">
+    <div class="progress-bg">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" 
+        attr.aria-valuenow="{{percentage}}" [style.width.%]="percentage">
+          <span class="sr-only">{{percentage}}% Complete</span>
+        </div>
+    </div>
+</div>

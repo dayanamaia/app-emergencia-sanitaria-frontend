@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.css']
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  @Input()
+  percentage: string;
+
+  @Input()
+  size: string;
 
 }

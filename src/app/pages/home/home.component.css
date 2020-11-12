@@ -42,6 +42,24 @@
     justify-content: space-between;
 }
 
+/* =overview
+-------------------------------------------------------------- */
+
+.overview {
+    margin-top: 30px;
+}
+
+.overview .overview__category {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.overview .overview__percentage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
 /* =media queries
 -------------------------------------------------------------- */
 @media screen and (min-width: 1025px) {
@@ -68,5 +86,9 @@
 
     .city__select input[type="text"] {
         width: inherit;
+    }
+
+    .overview.overview--md {
+        width: 320px;
     }
 }

@@ -50,6 +50,29 @@ h6 {
     display: flex;
 }
 
+/* =utils
+-------------------------------------------------------------- */
+
+.divider__bullet {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #ACC6DD;
+    border-radius: 50px;
+    margin: auto 12px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 /* =flags
 -------------------------------------------------------------- */
 
