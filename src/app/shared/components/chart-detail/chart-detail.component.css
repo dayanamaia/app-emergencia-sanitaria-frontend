@@ -1,0 +1,20 @@
+.chart-detail__title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.chart-detail__data {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    margin-bottom: 14px;
+}
+
+.chart-detail__percentage {
+    font-weight: 800;
+}
+
+.chart-detail__total {
+    font-size: 12px;
+    font-weight: 800;
+}
