@@ -1,35 +1,34 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'chart.js';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { IData } from './../../interfaces/data.interface';
 
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css']
 })
-export class LineChartComponent {
+export class LineChartComponent implements OnInit {
 
   lineChartType: string = "line";
   lineChartLabels: Array<String> = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez",];
-  optionData = {
-    lineTension: 0.2,
-    pointRadius: [4, 4, 4, 4],
-    borderWidth: 2,
-    pointHoverBorderWidth: 2,
-    spanGaps: true
+  lineChartData= [];
+
+  @Input()
+  data: IData[];
+
+  ngOnInit(): void {
+    this.transformaData();
   }
 
-  lineChartData: Array<any> = [
-    {
-      data: [2646, 2321, 2370, 2254, 2454, 2486, 2748, 2686, 2576, 2528, 2258, 2312],
-      label: "2019",
-      ...this.optionData
-    },
-    {
-      data: [2785, 2322, 2643, 2596, 3360, 3685, 3904, 2991],
-      label: "2020",
-      ...this.optionData
-    }
-  ];
+
+  transformaData() {
+    this.lineChartData = this.data.map(item => {
+      return {
+        ...item,
+        label: item.year,
+      }
+    });
+  }
 
   lineChartOptions: any = {
     responsive: true,
@@ -65,15 +64,15 @@ export class LineChartComponent {
 
   lineChartColors: Array<any> = [
     {
-      backgroundColor: "transparent",
+      backgroundColor: "#A6CEE3a4",
       borderColor: "#A6CEE3",
-      pointBackgroundColor: ["#A6CEE3", "#A6CEE3", "#A6CEE3", "#A6CEE3"],
-      pointBorderColor: "#A6CEE3",
-      pointHoverBackgroundColor: "#A6CEE3",
-      pointHoverBorderColor: "#A6CEE3"
+      pointBackgroundColor: ["#4aace0", "#4aace0", "#4aace0", "#4aace0"],
+      pointBorderColor: "#4aace0",
+      pointHoverBackgroundColor: "#4aace0",
+      pointHoverBorderColor: "#4aace0"
     },
     {
-      backgroundColor: "transparent",
+      backgroundColor: "#9E7DF9a4",
       borderColor: "#9E7DF9",
       pointBackgroundColor: ["#9E7DF9", "#9E7DF9", "#9E7DF9", "#9E7DF9"],
       pointBorderColor: "#9E7DF9",
