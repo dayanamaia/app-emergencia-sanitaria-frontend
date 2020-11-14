@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { ChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,7 +26,8 @@ registerLocaleData(ptBr)
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-PT' }],
   bootstrap: [AppComponent]
