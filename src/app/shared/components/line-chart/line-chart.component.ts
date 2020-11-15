@@ -10,7 +10,7 @@ import { IData } from './../../interfaces/data.interface';
 export class LineChartComponent implements OnInit {
 
   lineChartType: string = "line";
-  lineChartLabels: Array<String> = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez",];
+  lineChartLabels: Array<String> = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
   lineChartData= [];
 
   @Input()

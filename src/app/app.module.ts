@@ -13,6 +13,7 @@ import ptBr from '@angular/common/locales/pt';
 import { ProgressBarComponent } from './shared/components/progress-bar/progress-bar.component';
 import { ChartDetailComponent } from './shared/components/chart-detail/chart-detail.component';
 import { LineChartComponent } from './shared/components/line-chart/line-chart.component';
+import { MonthPipePipe } from './shared/pipes/month-pipe.pipe';
 registerLocaleData(ptBr)
 
 @NgModule({
@@ -22,7 +23,8 @@ registerLocaleData(ptBr)
     HomeComponent,
     ProgressBarComponent,
     ChartDetailComponent,
-    LineChartComponent
+    LineChartComponent,
+    MonthPipePipe
   ],
   imports: [
     BrowserModule,

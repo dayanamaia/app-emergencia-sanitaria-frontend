@@ -1,7 +1,7 @@
 <div class="chart-detail">
     <h3 class="chart-detail__title d-flex">
-        <span>{{data.month}}/{{data.yearA}}</span>
-        <span>{{data.month}}/{{data.yearB}}</span>
+        <span>{{data.month | monthPipe}}/{{data.yearA}}</span>
+        <span>{{data.month | monthPipe}}/{{data.yearB}}</span>
     </h3>
     <p class="chart-detail__data">
         <span class="chart-detail__total">{{data.totalA}}</span>
