@@ -1,3 +1,4 @@
+import { IDataChartDetail } from './../../interfaces/dataChartDetail.interface';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -10,9 +11,12 @@ export class ChartDetailComponent {
   constructor() { }
 
   @Input()
-  percentage: string = '29.6';
+  data: IDataChartDetail;
 
-  @Input()
-  total: string = '2780';
+  checkPercentage(percentage: string) {
+    if(!percentage.includes('-')) {
+      return '+';
+    }
+  }
 
 }

@@ -1,8 +1,12 @@
 <div class="chart-detail">
-    <h3 class="chart-detail__title">novembro/2019</h3>
+    <h3 class="chart-detail__title d-flex">
+        <span>{{data.month}}/{{data.yearA}}</span>
+        <span>{{data.month}}/{{data.yearB}}</span>
+    </h3>
     <p class="chart-detail__data">
-        <span class="chart-detail__percentage">{{percentage}}%</span>
-        <span class="chart-detail__total">{{total}}</span>
+        <span class="chart-detail__total">{{data.totalA}}</span>
+        <span class="chart-detail__percentage">{{checkPercentage(data.percentage)}}{{data.percentage}}%</span>
+        <span class="chart-detail__total">{{data.totalB}}</span>
     </p>
-    <app-progress-bar [percentage]="percentage" size="progress--small" aria-hidden="true"></app-progress-bar>
+    <app-progress-bar [percentage]="data.percentage" size="progress--small" aria-hidden="true"></app-progress-bar>
 </div>

@@ -1,6 +1,7 @@
 .chart-detail__title {
     font-weight: 600;
     font-size: 14px;
+    justify-content: space-between;
 }
 
 .chart-detail__data {

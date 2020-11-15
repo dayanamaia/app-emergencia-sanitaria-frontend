@@ -41,17 +41,6 @@
 </div>
 
 <div class="grid-info">
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
-    <app-chart-detail></app-chart-detail>
+    <app-chart-detail *ngFor="let data of dataChartDetail" [data]="data"></app-chart-detail>
 </div>
 
