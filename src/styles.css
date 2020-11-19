@@ -112,6 +112,13 @@ h6 {
 }
 
 
+/* =Forms
+-------------------------------------------------------------- */
+input[type="text"]:disabled {
+    background-color: #f4faff;
+    text-transform: uppercase;
+}
+
 /* =media queries
 -------------------------------------------------------------- */
 @media screen and (min-width: 1025px) {
