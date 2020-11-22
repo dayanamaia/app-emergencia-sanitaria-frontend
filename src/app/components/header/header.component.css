@@ -48,9 +48,9 @@ header {
 @media screen and (min-width: 1025px) {
 
     header {
-        height: 100%;
         width: 28.8%;
-        position: absolute;
+        height: 100%;
+        position: fixed;
         background-image: url('../../../assets/images/bg-shapes.png');
         background-repeat: no-repeat;
         background-position: -280px 110px;
