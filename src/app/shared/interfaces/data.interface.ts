@@ -1,4 +1,5 @@
 export interface IData {
-    data: [];
+    data: number[];
+    label: string;
     year: string;
 }

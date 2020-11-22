@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -14,6 +15,7 @@ import { ProgressBarComponent } from './shared/components/progress-bar/progress-
 import { ChartDetailComponent } from './shared/components/chart-detail/chart-detail.component';
 import { LineChartComponent } from './shared/components/line-chart/line-chart.component';
 import { MonthPipePipe } from './shared/pipes/month-pipe.pipe';
+import { DataMortalityService } from './services/data-mortality.service';
 registerLocaleData(ptBr)
 
 @NgModule({
@@ -28,10 +30,14 @@ registerLocaleData(ptBr)
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ChartsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt-PT' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-PT' },
+    DataMortalityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

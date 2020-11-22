@@ -1,8 +1,8 @@
 <div class="page__header">
     <p class="label__date">{{ date | date: 'longDate' }}</p>
     <div class="city__select">
-        <label for="city-select">pesquisar por região</label>
-        <input type="text" name="city-select" id="city-select" value="Sudeste" disabled>
+        <label for="city-select">pesquisar por estado</label>
+        <input type="text" name="city-select" id="city-select" value="São Paulo" disabled>
         <span aria-hidden="false" class="icon__select"></span>
     </div>
 </div>
@@ -10,21 +10,15 @@
 <div class="page__content">
     <div class="page__title-about d-flex">
         <h2>Risco de uma pandemia</h2>
-        <span class="flag-status flag-status--warning">
-            <span class="flag-status__icon"></span>
-            <span class="flag-status__name">alta</span>
-        </span>
     </div>
 </div>
 
 <div class="overview overview--md">
-    <p class="overview__category">overview</p>
-    <p class="overview__status">
-        <span class="overview__percentage">76%</span>
-        <span class="divider__bullet" aria-hidden="true"></span>
-        <span>de uma possível pandemia</span>
-    </p>
-    <app-progress-bar percentage="76"></app-progress-bar>
+    <p class="overview__category">status</p>
+    <span class="flag-status flag-status--warning">
+        <span class="flag-status__icon"></span>
+        <span class="flag-status__name">Alta Probabilidade</span>
+    </span>
 </div>
 
 <div class="chart">

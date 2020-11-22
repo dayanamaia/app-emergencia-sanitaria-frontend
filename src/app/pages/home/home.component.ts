@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { IData } from 'src/app/shared/interfaces/data.interface';
+
+import { IDataMortality } from 'src/app/shared/interfaces/dataMortality.interface';
+import { DataMortalityService } from './../../services/data-mortality.service';
 
 @Component({
   selector: 'app-home',
@@ -7,31 +11,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataMortalityService: DataMortalityService) { }
 
   date = new Date();
-  dataLineChart = [
-    {
-      year: '2019',
-      data: [2646, 2321, 2370, 2254, 2454, 2486, 2748, 2686, 2576, 2528, 2258, 2312]
-    },
-    {
-      year: '2020',
-      data: [2785, 2322, 2643, 2596, 3360, 3685, 3904, 2991]
-    }
-  ];
-
+  dataMortality: IDataMortality[] = [];
+  dataLineChart: IData[];
   dataChartDetail = [];
 
   ngOnInit(): void {
-    this.percentageByMonth();    
+    this.setDataChartDetail();
+  }
+
+  setDataChartDetail() {
+    this.dataMortalityService.getDataMortality().subscribe((data: IDataMortality[]) => {
+      const dataYearA = data.filter(item => item.Ano === 2019).map(item => item.Total);
+      const dataYearB = data.filter(item => item.Ano === 2020).map(item => item.Total);
+
+      this.dataLineChart = [
+        {
+          year: '2019',
+          label: '2019',
+          data: dataYearA
+        },
+        {
+          year: '2020',
+          label: '2020',
+          data: dataYearB
+        }
+      ];
+
+      this.percentageByMonth();
+    });
   }
 
   percentageByMonth() {
     let index = 0;
     let dataFinal = [];
 
-    while(index < this.dataLineChart[0].data[index] && this.dataLineChart[1].data[index]) {
+    while(
+      index < this.dataLineChart[0].data[index] && 
+      this.dataLineChart[1].data[index]) {
+
       dataFinal.push({
         yearA: this.dataLineChart[0].year,
         yearB: this.dataLineChart[1].year,

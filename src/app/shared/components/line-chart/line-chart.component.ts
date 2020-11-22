@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { IData } from './../../interfaces/data.interface';
 
@@ -7,28 +7,13 @@ import { IData } from './../../interfaces/data.interface';
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent {
 
   lineChartType: string = "line";
   lineChartLabels: Array<String> = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
-  lineChartData= [];
 
   @Input()
-  data: IData[];
-
-  ngOnInit(): void {
-    this.transformaData();
-  }
-
-
-  transformaData() {
-    this.lineChartData = this.data.map(item => {
-      return {
-        ...item,
-        label: item.year,
-      }
-    });
-  }
+  data: IData[] = [];
 
   lineChartOptions: any = {
     responsive: true,
