@@ -24,10 +24,16 @@ export class HomeComponent implements OnInit {
 
   setDataChartDetail() {
     this.dataMortalityService.getDataMortality().subscribe((data: IDataMortality[]) => {
+      const dataYearC = data.filter(item => item.Ano === 2018).map(item => item.Total);
       const dataYearA = data.filter(item => item.Ano === 2019).map(item => item.Total);
       const dataYearB = data.filter(item => item.Ano === 2020).map(item => item.Total);
 
       this.dataLineChart = [
+        {
+          year: '2018',
+          label: '2018',
+          data: dataYearC
+        },
         {
           year: '2019',
           label: '2019',
@@ -49,16 +55,16 @@ export class HomeComponent implements OnInit {
     let dataFinal = [];
 
     while(
-      index < this.dataLineChart[0].data[index] && 
-      this.dataLineChart[1].data[index]) {
+      index < this.dataLineChart[1].data[index] && 
+      this.dataLineChart[2].data[index]) {
 
       dataFinal.push({
-        yearA: this.dataLineChart[0].year,
-        yearB: this.dataLineChart[1].year,
-        totalA: this.dataLineChart[0].data[index],
-        totalB: this.dataLineChart[1].data[index],
+        yearA: this.dataLineChart[1].year,
+        yearB: this.dataLineChart[2].year,
+        totalA: this.dataLineChart[1].data[index],
+        totalB: this.dataLineChart[2].data[index],
         month: index + 1,
-        percentage: ((this.dataLineChart[1].data[index] - this.dataLineChart[0].data[index]) / this.dataLineChart[0].data[index] * 100).toFixed(2),
+        percentage: ((this.dataLineChart[2].data[index] - this.dataLineChart[1].data[index]) / this.dataLineChart[1].data[index] * 100).toFixed(2),
       });
 
       index++;
