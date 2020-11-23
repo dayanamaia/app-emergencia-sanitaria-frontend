@@ -6,4 +6,14 @@ module.exports = {
 
     return response.json(obitos);
   },
+
+  async show(request, response) {
+    const { regiao } = request.params;
+
+    const obitos = await Obito.find({
+      "Região/UF": regiao,
+    });
+
+    return response.json(obitos);
+  },
 };
